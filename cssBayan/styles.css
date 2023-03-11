@@ -1,0 +1,116 @@
+:root {
+  --background-main: #f5f5eb;
+  --border-color: #e4e8e7;
+  --color-main: #000000;
+  --color-accent: #2458d1;
+  --transition-delay: 1000ms;
+}
+
+*:focus-visible {
+  outline: none;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  background-color: var(--background-main);
+}
+
+.bayan {
+  padding: 1rem;
+}
+
+.bayan__wrapper {
+  margin: 0 auto;
+}
+
+.bayan__hero {
+  display: block;
+  width: 100%;
+  padding: 1rem 0;
+  font-size: 2rem;
+  color: var(--color-main);
+}
+
+.bayan__wrapper .bayan__radio:checked ~ .bayan__top {
+  color: var(--color-main);
+}
+
+.bayan__wrapper:hover {
+  opacity: 1;
+  color: var(--color-main);
+}
+
+.bayan__wrapper:hover .bayan__icon {
+  opacity: 1;
+}
+
+.bayan__raw {
+  display: block;
+  border-top: medium solid var(--border-color);
+  padding: 2rem 0;
+  cursor: pointer;
+}
+
+.bayan__raw:hover .bayan__icon {
+  opacity: 1;
+}
+
+.bayan__raw:hover span {
+  opacity: 1;
+  transform: rotate(45deg);
+}
+
+.bayan__raw:active {
+  color: var(--color-accent);
+}
+
+.bayan__radio {
+  display: none;
+}
+
+.bayan__radio:checked ~ .bayan__img,
+.bayan__raw:hover > .bayan__img {
+  width: 30%;
+  opacity: 1;
+  padding-top: 2rem;
+}
+
+.bayan__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bayan__title {
+  display: block;
+}
+
+.bayan__icon {
+  display: block;
+  font-size: 2.5rem;
+  opacity: 0;
+}
+
+.bayan__img {
+  width: 0;
+  opacity: 0;
+  padding-top: 0;
+  margin: 0 auto;
+  transition: width var(--transition-delay) ease-in,
+    opacity var(--transition-delay) ease-in;
+}
