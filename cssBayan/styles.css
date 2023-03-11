@@ -38,14 +38,6 @@ body {
   margin: 0 auto;
 }
 
-.bayan__hero {
-  display: block;
-  width: 100%;
-  padding: 1rem 0;
-  font-size: 2rem;
-  color: var(--color-main);
-}
-
 .bayan__wrapper .bayan__radio:checked ~ .bayan__top {
   color: var(--color-main);
 }
@@ -59,10 +51,18 @@ body {
   opacity: 1;
 }
 
+.bayan__hero {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0;
+  font-size: 1.5rem;
+  color: var(--color-main);
+}
+
 .bayan__raw {
   display: block;
   border-top: medium solid var(--border-color);
-  padding: 2rem 0;
+  padding: 0.5rem 0;
   cursor: pointer;
 }
 
@@ -85,9 +85,9 @@ body {
 
 .bayan__radio:checked ~ .bayan__img,
 .bayan__raw:hover > .bayan__img {
-  width: 30%;
+  width: 50%;
   opacity: 1;
-  padding-top: 2rem;
+  padding-top: 0.5rem;
 }
 
 .bayan__top {
@@ -102,7 +102,7 @@ body {
 
 .bayan__icon {
   display: block;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   opacity: 0;
 }
 
