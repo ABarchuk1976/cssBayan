@@ -39,7 +39,7 @@ body {
 }
 
 .bayan__wrapper .bayan__radio:checked ~ .bayan__top {
-  color: var(--color-main);
+  color: inherit;
 }
 
 .bayan__hero {
@@ -55,10 +55,6 @@ body {
   border-top: medium solid var(--border-color);
   padding: 0.5rem 0;
   cursor: pointer;
-}
-
-.bayan__raw:active {
-  color: var(--color-accent);
 }
 
 .bayan__radio {
@@ -169,4 +165,12 @@ body {
     opacity: 1;
     transform: rotate(45deg);
   }
+}
+
+.bayan__raw:active {
+  color: var(--color-accent);
+}
+
+.bayan__raw:active .bayan__img {
+  opacity: 0.5;
 }
