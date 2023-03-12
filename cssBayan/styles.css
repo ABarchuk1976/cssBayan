@@ -27,11 +27,16 @@ body {
   font-size: 0.6rem;
   font-weight: 700;
   color: var(--color-main);
-  background-color: var(--background-main);
+  background-color: #ffffff;
 }
 
 .bayan {
   padding: 1rem;
+  width: 90%;
+  margin: 0 auto;
+  background-color: var(--background-main);
+  min-height: 100vh;
+  border: thin solid var(--border-color);
 }
 
 .bayan__wrapper {
