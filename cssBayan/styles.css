@@ -1,0 +1,181 @@
+:root {
+  --background-main: #f5f5eb;
+  --border-color: #e4e8e7;
+  --color-main: #000000;
+  --color-accent: #2458d1;
+  --transition-delay: 750ms;
+}
+
+*:focus-visible {
+  outline: none;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: var(--color-main);
+  background-color: #ffffff;
+}
+
+.bayan {
+  padding: 1rem;
+  width: 90%;
+  margin: 0 auto;
+  background-color: var(--background-main);
+  min-height: 100vh;
+  border: thin solid var(--border-color);
+}
+
+.bayan__wrapper {
+  margin: 0 auto;
+}
+
+.bayan__wrapper .bayan__radio:checked ~ .bayan__top {
+  color: inherit;
+}
+
+.bayan__hero {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0;
+  font-size: 1.25rem;
+  color: var(--color-main);
+}
+
+.bayan__raw {
+  display: block;
+  border-top: medium solid var(--border-color);
+  padding: 0.5rem 0;
+  cursor: pointer;
+}
+
+.bayan__radio {
+  display: none;
+}
+
+.bayan__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bayan__title {
+  display: block;
+}
+
+.bayan__icon {
+  display: block;
+  font-size: 1.5rem;
+  opacity: 1;
+  transition: transform var(--transition-delay) ease-in;
+}
+
+.bayan__radio:checked ~ .bayan__top > .bayan__icon {
+  transform: rotate(45deg);
+}
+
+.bayan__img {
+  width: 0;
+  opacity: 0;
+  padding-top: 0;
+  margin: 0 auto;
+  transition: width var(--transition-delay) ease-in,
+    opacity var(--transition-delay) ease-in;
+}
+
+.bayan__radio:checked ~ .bayan__img {
+  width: 50%;
+  opacity: 1;
+  padding-top: 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 1rem;
+  }
+
+  .bayan {
+    padding: 2rem;
+  }
+
+  .bayan__hero {
+    padding: 1rem 0;
+    font-size: 1.75rem;
+  }
+
+  .bayan__raw {
+    padding: 1rem 0;
+  }
+
+  .bayan__radio:checked ~ .bayan__img {
+    width: 40%;
+    padding-top: 1rem;
+  }
+
+  .bayan__icon {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  body {
+    font-size: 1.5rem;
+    color: var(--color-accent);
+  }
+
+  .bayan {
+    padding: 2rem 3rem;
+  }
+
+  .bayan__hero {
+    padding: 1.5rem 0;
+    font-size: 3rem;
+  }
+
+  .bayan__radio:checked ~ .bayan__img,
+  .bayan__raw:hover > .bayan__img {
+    width: 30%;
+    opacity: 1;
+    padding-top: 1rem;
+  }
+
+  .bayan__icon {
+    font-size: 2.5rem;
+    opacity: 0;
+  }
+
+  .bayan__wrapper:hover {
+    opacity: 1;
+    color: var(--color-main);
+  }
+
+  .bayan__wrapper:hover .bayan__icon {
+    opacity: 1;
+  }
+
+  .bayan__raw:hover span {
+    opacity: 1;
+    transform: rotate(45deg);
+  }
+}
+
+.bayan__raw:active {
+  color: var(--color-accent);
+}
+
+.bayan__raw:active .bayan__img {
+  opacity: 0.5;
+}
